@@ -1,40 +1,61 @@
+# HOME CARE
 
+## **Prerequisites**
 
-## STEP 1: BACKEND 
+1. **Python 3.8+** 
+2. **Node.js 16+** and npm 
+3. Terminal/Command Prompt
 
+---
+
+## **FEATURES**
+1. **User Authentication**
+   -  JWT-based Authentication
+   - Role-based access (Client/Provider)
+   - Secure password hashing
+
+2. **Booking System**
+   - Book services with date/time 
+
+3. **OTP-based Identity Verification**
+   - 6-digit OTP generated on booking
+   - Provider verifies before service start
+   - Enhanced security
+
+4. **Payment Processing**
+   - Dummy card payment (no real transactions)
+   - Escrow: Payment held until service complete
+   - Automatic transfer to provider
+   - Platform fee deduction
+
+5. **Health Declarations**
+   - Submit COVID test results
+   - Track health status
+   - Privacy-preserved data
+
+6. **Dashboard**
+   - Client: View bookings
+   - Provider: View bookings and earnings
+   - Statistics
+
+7. **Service Management**
+   - Create, view, update, delete services
+   - Filter by service type
+   - Service details
+
+---
+
+## COMPLETE TEST FLOW
+
+### Instal Dependencies
 ```bash
-cd backend
-pytopython main.py
+pip install -r requirements.txt
 ```
 
-**✅ Backend running on http://localhost:8000**
-
----
-
-## STEP 2: FRONTEND 
-
-**Open NEW terminal!**
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
- Frontend running on http://localhost:3000**
-
----
-
-## STEP 3: TEST (30 seconds)
-
-1. Open: http://localhost:3000
-2. Click "Get Started"
-3. Register a new account
-4. Done! 🎉
-
----
-
-## 🧪 COMPLETE TEST FLOW
+### Run the batch file "run_app.bat"
+1.  Starts up the back end in a terminal window
+2.  Starts up the front end in a separte terminal window
+3.  launches the web app at the URL: "http://localhost:3000"
 
 ### Register Users
 ```
@@ -49,84 +70,70 @@ User 2 (Client):
 - Role: Client
 ```
 
-### As Provider: Create Service
+### Create Service As The Provider
 ```
 - Service Type: Plumbing
 - Title: Emergency Plumbing Service
 - Description: 24/7 plumbing services
-- Price: 100
+- Price: $100
 - Location: Adelaide CBD
 ```
 
-### As Client: Book Service
+### Book Service As The Client
 ```
 - Select service
 - Date: Tomorrow
 - Time: 10:00 AM
 - Location: 123 Main St
 - Card: 4111 1111 1111 1111
-- Name: John Doe
-- OTP will be displayed!
+- Name: John Johny
+- OTP will be displayed
 ```
 
-### As Provider: Complete Service
+### Complete Service As The Provider
 ```
 - View booking
-- Verify OTP (from above)
+- Verify OTP
 - Complete service
-- Payment transferred: $95 (5% fee = $5)
+- Payment transferred: $95 (5% Platform fee applied)
 ```
 
 ---
 
-## 📁 PROJECT STRUCTURE
+## REPO STRUCTURE
 
 ```
-covid-services-react-fastapi/
-├── backend/           ← FastAPI (Python)
-│   ├── main.py       ← Start here!
-│   └── ...
-├── frontend/          ← React (Node.js)
-│   ├── src/
-│   └── package.json
-└── README.md          ← Full documentation
+Secure Assesment Final/
+    backend/           
+        main.py       
+        auth.py
+        database.py
+        models.py
+        schemas.py
+        requirements.txt
+    frontend/          ← React (Node.js)
+        node_modules/
+        public/
+        src/
+            services/
+            components/
+                Navigation.jsx
+            context/
+                AuthContext.jsx
+            pages/
+                BookService.jsx
+                CreateService.jsx
+                Dashboardjsx
+                HealthDeclaration.jsx
+                Home.jsx
+                Login.jsx
+                Register.jsx
+                ServiceDetail.jsx
+                Services.jsx
+            App.jsx
+            main.jsx
+└── README.md          
 ```
 
 ---
 
-## 🆘 PROBLEMS?
-
-**Backend won't start:**
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt --force-reinstall
-```
-
-**Frontend won't start:**
-```bash
-rm -rf node_modules package-lock.json
-npm install
-```
-
-**Port already in use:**
-- Backend: Change port in `main.py` line: `uvicorn.run(app, port=8000)`
-- Frontend: It will suggest port 3001 automatically
-
----
-
-## ✅ SUCCESS CHECKLIST
-
-- [ ] Backend shows: "INFO: Application startup complete"
-- [ ] Frontend shows: "Local: http://localhost:3000"
-- [ ] Can open http://localhost:3000 in browser
-- [ ] Can register a new user
-- [ ] Can login
-- [ ] Dashboard loads
-
----
-
-## 🎯 THAT'S IT!
-
-**You're ready to develop!**
-
-See README.md for full documentation.
