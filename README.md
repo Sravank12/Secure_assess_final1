@@ -111,7 +111,7 @@ Secure Assesment Final/
         models.py
         schemas.py
         requirements.txt
-    frontend/          ← React (Node.js)
+    frontend/          
         node_modules/
         public/
         src/
@@ -132,7 +132,7 @@ Secure Assesment Final/
                 Services.jsx
             App.jsx
             main.jsx
-└── README.md          
+      README.md          
 ```
 
 ---
