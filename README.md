@@ -47,14 +47,14 @@
 
 ## COMPLETE TEST FLOW
 
-### Instal Dependencies
+### Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Run the batch file "run_app.bat"
-1.  Starts up the back end in a terminal window
-2.  Starts up the front end in a separte terminal window
+1.  Starts up the backend in a terminal window
+2.  Starts up the frontend in a separate terminal window
 3.  launches the web app at the URL: "http://localhost:3000"
 
 ### Register Users
@@ -70,7 +70,7 @@ User 2 (Client):
 - Role: Client
 ```
 
-### Create Service As The Provider
+### Create Service as the Provider
 ```
 - Service Type: Plumbing
 - Title: Emergency Plumbing Service
@@ -79,7 +79,7 @@ User 2 (Client):
 - Location: Adelaide CBD
 ```
 
-### Book Service As The Client
+### Book Service as the Client
 ```
 - Select service
 - Date: Tomorrow
@@ -87,15 +87,15 @@ User 2 (Client):
 - Location: 123 Main St
 - Card: 4111 1111 1111 1111
 - Name: John Johny
-- OTP will be displayed
+- OTP will be displayed.
 ```
 
-### Complete Service As The Provider
+### Complete Service as the Provider
 ```
 - View booking
 - Verify OTP
 - Complete service
-- Payment transferred: $95 (5% Platform fee applied)
+- Payment transferred: $95 (5% platform fee applied)
 ```
 
 ---
@@ -103,7 +103,7 @@ User 2 (Client):
 ## REPO STRUCTURE
 
 ```
-Secure Assesment Final/
+Secure Assessment Final/
     backend/           
         main.py       
         auth.py
@@ -111,7 +111,7 @@ Secure Assesment Final/
         models.py
         schemas.py
         requirements.txt
-    frontend/          
+    frontend/          ← React (Node.js)
         node_modules/
         public/
         src/
@@ -123,7 +123,7 @@ Secure Assesment Final/
             pages/
                 BookService.jsx
                 CreateService.jsx
-                Dashboardjsx
+                Dashboard.jsx
                 HealthDeclaration.jsx
                 Home.jsx
                 Login.jsx
@@ -132,7 +132,7 @@ Secure Assesment Final/
                 Services.jsx
             App.jsx
             main.jsx
-      README.md          
+   README.md          
 ```
 
 ---
